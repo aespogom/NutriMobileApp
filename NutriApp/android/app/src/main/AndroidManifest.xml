@@ -2,6 +2,8 @@
   package="com.nutriapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <user-permission android:name="android.permission.CAMERA" />
+    <user-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
       android:name=".MainApplication"

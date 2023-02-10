@@ -2,9 +2,13 @@
 Progressive web mobile app focused on extracting the nutritional information from a photo.
 
 First steps: (more detailed steps to follow in https://reactnative.dev/docs/environment-setup)
-1. Node (can be downloaded from https://chocolatey.org/)
+1. Node 
+   - Windows: can be downloaded from https://chocolatey.org/
+   - Linux: can be downloaded from https://nodejs.org/en/download/package-manager/
+   - MacOs: can be downloaded from https://nodejs.org/en/download/package-manager/
 
 2. Java 11
+   - https://www.java.com/en/download/help/download_options.html
    - Make sure the user variable JAVA_HOME has no spaces
    - e.g. C:\Java\jdk-11
 
@@ -16,16 +20,22 @@ First steps: (more detailed steps to follow in https://reactnative.dev/docs/envi
    - Add a user variable ANDROID_HOME as %LOCALAPPDATA%\Android\Sdk
    - Append a new path in user variable PATH as %PATH%;%LOCALAPPDATA%\Android\Sdk\platform-tools
 
-4. Clone the project repository
+4. Device manager 
+   - Create device
+   - Select Pixel 2
+   - Select S as software (?) and download
+   - Finish
+
+5. Clone the project repository
    - git clone https...
 
-5. Move to project directory
+6. Move to project directory
    - cd .\NutriApp\
 
-6. Start device virtual emulator
+7. Start device virtual emulator
    - Open device manager
    - Select virtual and choose one mobile device
    - Run |>
 
-7. Run project:
+8. Run project:
    - npx react-native start
