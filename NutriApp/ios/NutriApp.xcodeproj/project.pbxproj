@@ -44,6 +44,22 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NutriApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NutriApp-NutriAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriApp-NutriAppTests.release.xcconfig"; path = "Target Support Files/Pods-NutriApp-NutriAppTests/Pods-NutriApp-NutriAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FE4F6B4628BBA57700B82E4F /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		FE4F6B4728BBA57700B82E4F /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		FE4F6B4828BBA57700B82E4F /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		FE4F6B4928BBA57700B82E4F /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		FE4F6B4A28BBA57700B82E4F /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		FE4F6B4B28BBA57700B82E4F /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		FE4F6B4C28BBA57700B82E4F /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		FE4F6B4D28BBA57700B82E4F /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		FE4F6B4E28BBA57700B82E4F /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		FE4F6B4F28BBA57700B82E4F /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		FE4F6B5028BBA57700B82E4F /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		FE4F6B5128BBA57700B82E4F /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		FE4F6B5228BBA57700B82E4F /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		FE4F6B5328BBA57700B82E4F /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		FE4F6B5428BBA57700B82E4F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		FE4F6B5528BBA57700B82E4F /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +132,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				FE4F6B4528BBA57700B82E4F /* Fonts */,
 				13B07FAE1A68108700A75B9A /* NutriApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* NutriAppTests */,
@@ -146,6 +163,29 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-NutriApp-NutriAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE4F6B4528BBA57700B82E4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE4F6B4628BBA57700B82E4F /* Fontisto.ttf */,
+				FE4F6B4728BBA57700B82E4F /* Octicons.ttf */,
+				FE4F6B4828BBA57700B82E4F /* Feather.ttf */,
+				FE4F6B4928BBA57700B82E4F /* Entypo.ttf */,
+				FE4F6B4A28BBA57700B82E4F /* FontAwesome5_Brands.ttf */,
+				FE4F6B4B28BBA57700B82E4F /* MaterialCommunityIcons.ttf */,
+				FE4F6B4C28BBA57700B82E4F /* AntDesign.ttf */,
+				FE4F6B4D28BBA57700B82E4F /* Foundation.ttf */,
+				FE4F6B4E28BBA57700B82E4F /* Ionicons.ttf */,
+				FE4F6B4F28BBA57700B82E4F /* FontAwesome5_Solid.ttf */,
+				FE4F6B5028BBA57700B82E4F /* FontAwesome5_Regular.ttf */,
+				FE4F6B5128BBA57700B82E4F /* FontAwesome.ttf */,
+				FE4F6B5228BBA57700B82E4F /* Zocial.ttf */,
+				FE4F6B5328BBA57700B82E4F /* EvilIcons.ttf */,
+				FE4F6B5428BBA57700B82E4F /* SimpleLineIcons.ttf */,
+				FE4F6B5528BBA57700B82E4F /* MaterialIcons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,12 +527,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = NutriApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -518,7 +558,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -598,6 +637,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -661,6 +701,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

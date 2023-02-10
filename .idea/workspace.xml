@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da1a1ebc-e7f5-4de5-8d13-ef2d45b3c8c2" name="Changes" comment="Implement https://github.com/daboigbae/react-native-template template">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/.buckconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/.flowconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/_BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+sUBri0ELHzTiJ4jEBPf3PU_1Tw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0mr17fKmUhGvJRXZCcoKzyx2beU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2PbswT7NdA6N+8oSyEqo1SOGpPs=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2RKoN+DxRwC5v1cqLm+_rt8+UsI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3RalnowRK_2HrGOoe8NazQkoKzE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3aiCJAxcWAzQ+Eu5u_H_iLNXLa8=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3lPgXWYy1rW6aUtZv3Mmvx1HN+g=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3yQdJZ1OWA_zlljjKaPHitOTABA=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4as8TA1TZSOq3zZmZYQ2Um9lWa4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/5N5VEQX_7sntJS7hnVzWDcCvLdo=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/5owLCRkSG4PHEa63ee5HmsUlMUQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6TTRHvDkHYfUmUURT3N2NOGaCJk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6jf5UOKH_Ob7o8FR6Vd_ScAInXA=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7_QAIm2Uk1T6Hr2uTnM92t9ZNrU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7tuRjlefz_aucfW10K1Gx6qxIy4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8NqYhXOOq8NqZwzGb0AaG1iRPJw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8bnryHU4z_RVmRyrnPAigENj+Q8=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/A4iV03Eo+j+ESTxx4Pz_M_whZiM=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AfuddziST+2DUYquwrHjAwS15EQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BRRdccm9lmBG+oGiOL9MltHmdxE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BRiPBidhzT2p6j0fZp8u4NFugT4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BbUdYOA0zCxhQZbw21ka1eg5e_M=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CMcxyMqzodkmlwZd_gFQWesOdIQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DSniKDll5H6Lxr6VBb_9DppI830=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FZgxIEsuottZstbnryOgfNkZUSw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GHkKoIl9SDBH++MVVGSYd__3gU4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/H7fN6u4j7BPTvDJ3cX5i6Z3JJng=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HVf3xBSX79PRL9nJHC_zObla_xU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/I6VlFQgJku6hjeKB1nT90Z4KEAw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/IN8ksQLx8Zwh7ZsaNeM4F2RU4DM=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/JNjAtR7WSwFsZ0usBCjAjYjqE7o=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/JXxGB55+lIDDauvFnDBP9hQ8IOU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Jqdmcmzk_QORjC32pXO9DQ2FORQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/KG4lQJmR7Wn_zhAHbmim5NKVBZk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/KfK5rpmTzdWPy26WxlDbBixxQew=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/L3KI69qmX4vlE1t8NHNWaP_OFpA=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/L7o+V2mFrfuYtW+x0owsH8Vbd50=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NBq0Iy0_Uav56yBplzaV2NhTclo=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NS6xt8nuyFEDsuqS1tgnpnlnr6k=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NUdyk5B4m3G7INX6RxdBgY_ZgTU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PJNrMDKIEm34NNl6QrLHlbQ95Vo=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/QfQCTaaLP37nwZPNnNIo+a6g2sw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RbBDwAJsrPHllNPJuyROV+qeGlI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RvLqU_bXvUcKYoex4KmQ8IDkNh0=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/SBI4ubfcm2CvXZFRn7WiiMvVku4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TPjoUsIvxHMjennJk3lwtomWCTI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Th9ZUTKCcx931pDxpstpN92mfaE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/UPnNMV1ghhPXEDDnwBhCx+bGc9o=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/UofwUOtVluxb+xVH7HJQ5YriPrY=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VpruAfDtATuyJ18wKXz14AAl1aE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WOyaT9GfNnOju9BA0P93t4wqpBM=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Z3yJBO_gMigakiSTcYf60iisUIc=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZR7nmBQwQpam+BZrX98oGTTrjT4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/a5siHVWic24h+zBPhMu_qKK6Sxk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/aksZ_aG7yFc03reWGlLbeTtJdVU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/azdwJB9RIxa8IJZOa46v4msJMYs=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/bK4T_e8VnKuSw3upMP5S5iCFArY=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cHvOTgT+y+9PrundlR4yTjxX_cs=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/duK1R9HHF1APHKf84_V2nD62xSE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/eagiomTkxqOv2ro+KAkmnS11oa4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ekhx_q1te47l9jkHz7fcO9OmY08=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fECrMAVycrd0B8sAyFCXydkHJfU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fPnk7NzWxCuh48nO4AtitP7FQYA=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fQF26_H1bG5SV0teSCCGUFUUeJo=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fk26UrnN1jwRGBwLD_uYRMeUxpw=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gCEdK0UiSOUslUdWxj+qHEFXtrU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/h664KAIwdzMACGYZlGI02droU7E=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iF3qP4IxaEyHvlBbpSc2u6iweao=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iQU8ODlYGwRla_+U_eomyWWi8C4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/igJ4P3EqpnAQzZr6PyUbNvagMcQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ihqxvpUAL_fZNYV2t9_SabxLTgE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/jDWOUkcQVnVTYJOuUIfqQtFWTqk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/jHtL0cd56pv6yOSSjhliazX_6PI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/km5_ax2qQMSt27UXi9YrCmYaI18=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/lvvNXSluWKzIjLJ336KCZqNgwFE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/mE9beNhy_m+u8+TygO8dzF3LQl0=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/m_J_gbXfNk9TSPFEoHkQIbMzkWY=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/myWZnVn+_Ni3HmmqeuDV9_ZhaXE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/oX7BnAQ9pBd3B2S_yTqgmhDajng=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pWIObtoeXvz7+B_qG8Bigly9Wl0=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qxZ0qskgT2CDtg3zBh___ZhXxZg=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/rdFoCXe+Xwq6mTjX0YFv14klF5A=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/rq9DkgMLq7zgJiwXjrN6_SB+CZQ=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ruIm0wrJZfvVDXFo40IGgE9JD0w=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/sSWZOqvJfJ0qNi9p2cNgBcVDc_4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tFLsedKNQFIUVxkvYnLvppzguSE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uQj+oaO_h0FCSHEka7246uZ0s0w=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/v3TNNkEyyOVbQUYOD3ynZAR8Wb4=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vkXhrBJIALDEywD69giFzKJY9oM=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/wpz7ESLODFHGVK5zlOC49twLPOE=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/x2YhNM2aS7R9_eUihRUN7Rm6uxc=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/xJqGC1rMk7+XDOC9pA7y5JCTsxk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h360dp-land-v13/values-h360dp-land-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/build_defs.bzl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/newarchitecture/MainApplicationReactNativeHost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/newarchitecture/components/MainComponentsRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/newarchitecture/modules/MainApplicationTurboModuleManagerDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainApplicationModuleProvider.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainApplicationModuleProvider.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainComponentsRegistry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/MainComponentsRegistry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/jni/OnLoad.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/AntDesign.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Entypo.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/EvilIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Feather.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/FontAwesome.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/FontAwesome5_Brands.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/FontAwesome5_Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/FontAwesome5_Solid.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Fontisto.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Foundation.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Ionicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/MaterialCommunityIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/MaterialIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Octicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/SimpleLineIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Fonts/Zocial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/ios/Podfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/assets/lottie/landingAnimation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/hooks/useLocalize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/navigation/BottomTabNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/navigation/Navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/redux/UserSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/LandingScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/utils/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/utils/screens.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/translations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NutriMobileApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.node-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.prettierrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/.prettierrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/.ruby-version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/__tests__/App-test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/__tests__/App-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/java/com/nutriapp/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/ios/NutriApp.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/ios/NutriApp/AppDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp/AppDelegate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/ios/NutriApp/AppDelegate.mm" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp/AppDelegate.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/ios/NutriApp/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/ios/NutriApp/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/tsconfig.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2LNw0vE7Jlc2U2oofceEGO0Zrlp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anaes/StudioProjects/react-native-vision-camera&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anaes\StudioProjects\NutriMobileApp\NutriApp" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da1a1ebc-e7f5-4de5-8d13-ef2d45b3c8c2" name="Changes" comment="" />
+      <created>1675724629955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675724629955</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit. Baseline app">
+      <created>1675808125563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675808125563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit. Baseline app">
+      <created>1675808286332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675808286332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit. Baseline app" />
+    <MESSAGE value="Implement https://github.com/daboigbae/react-native-template template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement https://github.com/daboigbae/react-native-template template" />
+  </component>
+</project>
