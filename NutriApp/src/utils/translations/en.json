@@ -1,4 +1,5 @@
 {
-	"changeButton": "Change this button",
-	"main": "Main"
+	"changeButton": "Change",
+	"cameraButton": "Take a snapshot of your food",
+	"main": "NutriApp"
 }

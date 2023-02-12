@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1a1ebc-e7f5-4de5-8d13-ef2d45b3c8c2" name="Changes" comment="Implement https://github.com/daboigbae/react-native-template template">
+    <list default="true" id="da1a1ebc-e7f5-4de5-8d13-ef2d45b3c8c2" name="Changes" comment="Camera permission">
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutriApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/src/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/es.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/translations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +34,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -37,12 +59,16 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DEBUGGABLE_DEVICE": "Pixel_2_API_31 [emulator-5554]",
+    "DEBUGGABLE_PROCESS": "com.nutriapp",
+    "DEBUGGER_ID": "Java",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHOW_ALL_PROCESSES": "true",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "C:/Users/anaes/StudioProjects/NutriMobileApp",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -84,8 +110,18 @@
       <option name="project" value="LOCAL" />
       <updated>1676028490810</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Camera permission">
+      <created>1676040010571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676040010571</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -101,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Baseline app" />
     <MESSAGE value="Implement https://github.com/daboigbae/react-native-template template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement https://github.com/daboigbae/react-native-template template" />
+    <MESSAGE value="Camera permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera permission" />
   </component>
 </project>
