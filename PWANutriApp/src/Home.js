@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react'
-import { FaCamera } from "react-icons/fa";
+import FoodInfo from './FoodInfo';
 
 
 
@@ -8,6 +8,8 @@ export default  function Home()
     const videoRef = useRef(null);
     const photoRef = useRef(null);
     const [hasPhoto, setHasPhoto] = useState(false);
+    const [hasFood, setHasFood] = useState(false);
+
 
     const getVideo = () => {
         navigator.mediaDevices
@@ -29,6 +31,9 @@ export default  function Home()
     }, [videoRef]);
 
     const takePhoto = () => {
+        setHasPhoto(false);
+        setHasFood(false);
+        
         const width = 414;
         const height = width / (16/9);
 
@@ -45,13 +50,14 @@ export default  function Home()
         document.getElementById('buttonSnap').innerHTML='Retake';
     }
 
-    const closePhoto = () => {
+    const sendAndClosePhoto = () => {
         let photo = photoRef.current;
         let ctx = photo.getContext('2d');
         ctx.clearRect(0,0,photo.width, photo.height);
 
         setHasPhoto(false);
         document.getElementById('buttonSnap').innerHTML='SNAP!';
+        setHasFood(true);
     }
 
     return (
@@ -62,7 +68,8 @@ export default  function Home()
             </div>
             <div id='photoElement' className={'result' + (hasPhoto ? ' hasPhoto' : '')}>
                 <canvas ref={photoRef}></canvas>
-                <button style={ hasPhoto ? {display:'block'} : {display:'none'}} >SEND!</button>
+                <button onClick={sendAndClosePhoto} style={ hasPhoto ? {display:'block'} : {display:'none'}} >SEND!</button>
+                {hasFood ? <FoodInfo /> : null}
             </div>
         </div>
     )
