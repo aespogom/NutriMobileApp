@@ -6,6 +6,8 @@ import * as cte from './utils/constants'
 export default function FoodInfo() {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
+    const [insulineDose, setInsuline] = useState('');
+
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
@@ -45,14 +47,28 @@ export default function FoodInfo() {
         }
         
     }
+
     const findSugar = (item) => {
         let sugar = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_SUGARS)
         return sugar.value
     }
+
     const findCarbo = (item) => {
         let carbo = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_CARBO)
         return carbo['value']
     }
+
+    const calcuInsuline = (event, item) => {
+        // https://www.diabeteseducationandresearchcenter.org/news/type-2-diabetes-how-to-calculate-insulin-doses
+        let CHO = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_CARBO).value / cte.CHO_ratio
+        if (event.target.value > 120){
+            let HS_correction = (event.target.value - 120) / 50
+            setInsuline(Math.round(CHO+HS_correction))
+        } else {
+            setInsuline(Math.round(CHO));
+        }
+    };
+
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
@@ -73,6 +89,7 @@ export default function FoodInfo() {
             setData(JSON.parse(collection))
         })
     }, [])
+
     return (
         <div id="foodTable">
             <div className='offline'>
@@ -106,6 +123,13 @@ export default function FoodInfo() {
                         
                     </tbody>
                 </Table>
+            }
+            {data && 
+                <div className="input-group">
+                    <label htmlFor="glucose">Glucose level</label>
+                    <input type="number" id="glucose" onChange={(event) => calcuInsuline(event, data)} />
+                    <p> Insuline dose: {insulineDose} </p>
+                </div>
             }
         </div>
     )
