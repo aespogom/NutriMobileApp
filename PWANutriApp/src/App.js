@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {Navbar, Nav} from 'react-bootstrap';
 import Home from './Home'
-import About from './About'
-import Users from './Users'
+// import About from './About'
+// import Users from './Users'
 import {Link ,Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 
 function App() {
@@ -15,13 +15,9 @@ function App() {
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/users">Users</Nav.Link>
           </Nav>
       </Navbar>
       <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/users" element={<Users />} />
         <Route path="/" element={<Home />} />
       </Routes>
       </Router>
