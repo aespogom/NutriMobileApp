@@ -8,7 +8,8 @@
 .App {
   min-height: 100vh;
   position: relative;
-  background-color: #313131;
+  background-color: #98A6D4;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -23,26 +24,36 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #564D80;
+  min-height: 10vh;
+  border-radius: 3vh;
+  top: 1vh;
+  margin: 0 10px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #564D80;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700 !important;
 }
 
 .navbar a:hover{
-  color: white
+  color: white; 
+  zoom: 1%;
 }
 
 .navbar a{
-  color: #ddd
+  color: #ddd;
+  padding: 0 0 0 5vw;
 }
 
 @keyframes App-logo-spin {
@@ -56,30 +67,36 @@
 
 /* Camera component */
 
-#cameraElement {
+.cameraElement {
   position: relative;
-}
-
-.result {
-  position: unset;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  background-color: #313131;
-  transition: 0.4s;
-}
-
-.result.hasPhoto {
+  max-width: 50vw;
+  top: 10vh;
   left: 0;
 }
 
+.cameraElement.center {
+  left: 25vw;
+  transition: 0.4s;
+}
+
+.result {
+  position: absolute;
+  top: 20vh;
+  left: 100%;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  background-color: #98A6D4
+}
+
+.result.hasPhoto {
+  left: 50vw;
+}
+
 video{
-  width: 100%;
-  max-width: 100%;
+  width: 50vw;
   height: auto;
+  border-radius: 3rem;
 }
 
 button {
@@ -89,10 +106,11 @@ button {
 
   appearance: none;
   border: none;
+  border-radius: 3rem !important;
   outline: none;
 
   padding: 8px 16px;
-  background-image: linear-gradient(to right, #844FFF, #ff4f84 50%);
+  background-image: linear-gradient(to right, #D3FCD5, #C2F970 50%);
   background-position: 0%;
   background-size: 200%;
   color: #fff;
@@ -110,4 +128,28 @@ button:hover{
 canvas {
   width: 100%;
   height: auto;
+  border-radius: 3rem;
+}
+
+/* FoodInfo component */
+
+.foodContainer{
+  display: flex;
+  justify-content: center;
+}
+
+#foodTable{
+  position: absolute;
+  text-align: center;
+  top: 60vh;
+}
+
+#foodTable > table {
+  background-color: #564D80;
+  border-radius: 1vh;
+  color: white;
+  font-weight: 700;
+}
+#foodTable > table > tbody > tr > td {
+  color: white;
 }

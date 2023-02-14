@@ -1,6 +1,8 @@
-import React, {useRef, useEffect, useState} from 'react'
+import React, {useRef, useEffect, useState} from 'react';
 import FoodInfo from './FoodInfo';
-
+import {TbRepeat} from 'react-icons/tb';
+import {FiCamera} from 'react-icons/fi';
+import {MdOutlineSendToMobile} from 'react-icons/md';
 
 
 export default  function Home()
@@ -47,7 +49,6 @@ export default  function Home()
         ctx.clearRect(0, 0, ctx.width,ctx.height);
         ctx.drawImage(video, 0, 0, width, height);
         setHasPhoto(true);
-        document.getElementById('buttonSnap').innerHTML='Retake';
     }
 
     const sendAndClosePhoto = () => {
@@ -56,19 +57,23 @@ export default  function Home()
         ctx.clearRect(0,0,photo.width, photo.height);
 
         setHasPhoto(false);
-        document.getElementById('buttonSnap').innerHTML='SNAP!';
         setHasFood(true);
     }
 
     return (
         <div>
-            <div id='cameraElement'>
+            <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
                 <video ref={videoRef}></video>
-                <button id="buttonSnap" onClick={takePhoto}>SNAP!</button>
+                <button id="buttonSnap" onClick={takePhoto}>
+                    {hasPhoto ? <TbRepeat/> : <FiCamera/>}
+                </button>
             </div>
-            <div id='photoElement' className={'result' + (hasPhoto ? ' hasPhoto' : '')}>
+            <div id='photoElement' className={'cameraElement result' + (hasPhoto ? ' hasPhoto' : '')}>
                 <canvas ref={photoRef}></canvas>
-                <button onClick={sendAndClosePhoto} style={ hasPhoto ? {display:'block'} : {display:'none'}} >SEND!</button>
+                <button onClick={sendAndClosePhoto} style={ hasPhoto ? {display:'block'} : {display:'none'}} ><MdOutlineSendToMobile/></button>
+                
+            </div>
+            <div className='foodContainer'>
                 {hasFood ? <FoodInfo /> : null}
             </div>
         </div>

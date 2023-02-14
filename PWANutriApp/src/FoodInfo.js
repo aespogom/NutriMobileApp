@@ -4,8 +4,9 @@ import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 
 export default function FoodInfo() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
+
     const preprocessResponse = (data) => {
         let a = FuzzySet();
         a.add('pizza');
@@ -33,12 +34,12 @@ export default function FoodInfo() {
                             best_idx = i;
                         }
                     } catch(error){
-                         console.log(error);
+                        console.log(error);
                     }
                 }
             }
-            console.log('Best match: ', data.filter(d => d.fdcId === data[best_idx].fdcId));
-            return data.filter(d => d.fdcId === data[best_idx].fdcId)
+            console.log('Best match: ', data.find(d => d.fdcId === data[best_idx].fdcId));
+            return data.find(d => d.fdcId === data[best_idx].fdcId)
         } else {
             return 'Error'
         }
@@ -73,8 +74,8 @@ export default function FoodInfo() {
         })
     }, [])
     return (
-        <div>
-            <div>
+        <div id="foodTable">
+            <div className='offline'>
                 {
                     mode === 'offline' ?
                         <div className="alert alert-warning" role="alert">
@@ -84,29 +85,28 @@ export default function FoodInfo() {
 
                 }
             </div>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Description</th>
-                        <th>Sugars (g)</th>
-                        <th>Carbohydrates (g)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        data.map((item) => (
-                            <tr>
-                                <td key="id">{item.fdcId}</td>
-                                <td key="description">{item.description}</td>
-                                <td key="sugars">{findSugar(item)}</td>
-                                <td key="carbo">{findCarbo(item)}</td>
-                            </tr>
-                        ))
-                    }
-
-                </tbody>
-            </Table>
+            { data &&
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Description</th>
+                            <th>Sugars (g)</th>
+                            <th>Carbohydrates (g)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td key="id">{data.fdcId}</td>
+                            <td key="description">{data.description}</td>
+                            <td key="sugars">{findSugar(data)}</td>
+                            <td key="carbo">{findCarbo(data)}</td>
+                        </tr>
+                        
+                    </tbody>
+                </Table>
+            }
         </div>
     )
 }
