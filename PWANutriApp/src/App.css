@@ -48,7 +48,8 @@
 
 .navbar a:hover{
   color: white; 
-  zoom: 1%;
+  font-size: 4vh;
+  transition: 1s ease-out;
 }
 
 .navbar a{
