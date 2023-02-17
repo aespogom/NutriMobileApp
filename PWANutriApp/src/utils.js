@@ -4,7 +4,7 @@ import sortBy from 'lodash/sortBy';
 import take from 'lodash/take';
 import { food101Classes } from './food101';
 
-export function food101topK(classProbabilities, k = 5) {
+export function food101topK(classProbabilities, k = 1) {
   const probs = isTypedArray(classProbabilities)
     ? Array.prototype.slice.call(classProbabilities)
     : classProbabilities;

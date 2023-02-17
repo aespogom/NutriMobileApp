@@ -3,15 +3,16 @@ import { Table } from 'react-bootstrap'
 import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 
-export default function FoodInfo() {
+export default function FoodInfo(food) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
 
+    console.log('foodinfo:', food.name_);
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
-        a.add('pizza');
+        a.add(food.name_);
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
@@ -20,7 +21,7 @@ export default function FoodInfo() {
             for (let i=0; i< data.length; i++){
                 if (data[i]['dataType']==='Branded'){
                     try{
-                        curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], ['pizza'], 0);
+                        curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food.name_], 0);
                         if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
                             best_ratio = curr_ratio[0][0];
                             best_idx = i;
@@ -30,7 +31,7 @@ export default function FoodInfo() {
                     }
                 } else {
                     try{
-                        curr_ratio = a.get(data[i]['description'], ['pizza'], 0);
+                        curr_ratio = a.get(data[i]['description'], [food.name_], 0);
                         if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
                             best_ratio = curr_ratio[0][0];
                             best_idx = i;
@@ -72,7 +73,7 @@ export default function FoodInfo() {
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
-            body: JSON.stringify({generalSearchInput: 'pizza'}),
+            body: JSON.stringify({generalSearchInput: food.name_}),
             headers: new Headers({'Content-Type': 'application/json'}),
         }
         let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC"

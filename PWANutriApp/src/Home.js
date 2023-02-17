@@ -1,11 +1,12 @@
 import React, {useRef, useEffect, useState, setState} from 'react';
 import FoodInfo from './FoodInfo';
-import {TbRepeat} from 'react-icons/tb';
+import {TbBatteryEco, TbRepeat} from 'react-icons/tb';
 import {FiCamera} from 'react-icons/fi';
 import {MdOutlineSendToMobile} from 'react-icons/md';
 import ndarray from 'ndarray';
 import ops from 'ndarray-ops';
 import { food101topK } from './utils';
+import { NavItem } from 'react-bootstrap';
 
 export default  function Home()
 {
@@ -39,6 +40,7 @@ export default  function Home()
     const [hasPhoto, setHasPhoto] = useState(false);
     const [hasFood, setHasFood] = useState(false);
     const [model, setModel] = useState(false);
+    const [foodpred, setFoodPred] = useState(false);
 
 
     const getVideo = () => {
@@ -153,10 +155,12 @@ export default  function Home()
         const predPromise = model.predict(inputData);
     
         predPromise.then(outputData => {
-          console.log(outputData);
-          const preds = outputData['dense_1'];
-          const topK = food101topK(preds);
-          console.log(topK);
+            // console.log(outputData);
+            const preds = outputData['dense_1'];
+            const bestpred = food101topK(preds)[0].name;
+            console.log(bestpred)
+            setFoodPred(bestpred);
+            setHasFood(true);
         });
       }
 
@@ -165,9 +169,9 @@ export default  function Home()
         let photo = photoRef.current;
         let ctx = photo.getContext('2d');
         ctx.clearRect(0,0,photo.width, photo.height);
-
+        console.log(foodpred);
         setHasPhoto(false);
-        setHasFood(true);
+        // setHasFood(true);
     }
 
     return (
@@ -187,7 +191,7 @@ export default  function Home()
                 
             </div>
             <div className='foodContainer'>
-                {hasFood ? <FoodInfo /> : null}
+                {hasFood ? <FoodInfo name_={foodpred} /> : null}
             </div>
         </div>
     )
