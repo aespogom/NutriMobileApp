@@ -11,6 +11,7 @@ export default  function Home()
     const photoRef = useRef(null);
     const [hasPhoto, setHasPhoto] = useState(false);
     const [hasFood, setHasFood] = useState(false);
+    const [backUpData, setBackUpData] = useState(false);
 
 
     const getVideo = () => {
@@ -29,7 +30,8 @@ export default  function Home()
     }
 
     useEffect(() => {
-        getVideo()
+        getVideo();
+        backUpDataFunction();
     }, [videoRef]);
 
     const takePhoto = () => {
@@ -60,6 +62,16 @@ export default  function Home()
         setHasFood(true);
     }
 
+    const backUpDataFunction = () => fetch('./food.json', {
+        headers: 
+            {'Content-Type': 'application/json','Accept': 'application/json'}
+        })
+        .then((response) => {
+        response.json().then((result) => {
+            setBackUpData(result)
+        })
+    })
+
     return (
         <div>
             <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
@@ -74,7 +86,7 @@ export default  function Home()
                 
             </div>
             <div className='foodContainer'>
-                {hasFood ? <FoodInfo /> : null}
+                {hasFood ? <FoodInfo backUpData={backUpData} /> : null}
             </div>
         </div>
     )

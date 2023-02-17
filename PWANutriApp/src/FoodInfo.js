@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap'
 import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 
-export default function FoodInfo() {
+export default function FoodInfo(backUpData) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
@@ -11,50 +11,60 @@ export default function FoodInfo() {
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
-        a.add('pizza');
+        a.add('cereal');
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
-        if (data['foods']){
-            data = data.foods;
-            for (let i=0; i< data.length; i++){
-                if (data[i]['dataType']==='Branded'){
-                    try{
-                        curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], ['pizza'], 0);
-                        if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-                            best_ratio = curr_ratio[0][0];
-                            best_idx = i;
-                        }
-                    } catch(error){
-                        console.log(error);
+        for (let i=0; i< data.length; i++){
+            if (data[i]['dataType']==='Branded'){
+                try{
+                    curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], ['cereal'], 0);
+                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+                        best_ratio = curr_ratio[0][0];
+                        best_idx = data[i].fdcId;
                     }
-                } else {
-                    try{
-                        curr_ratio = a.get(data[i]['description'], ['pizza'], 0);
-                        if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-                            best_ratio = curr_ratio[0][0];
-                            best_idx = i;
-                        }
-                    } catch(error){
-                        console.log(error);
+                } catch(error){
+                    console.log(error);
+                }
+            } else {
+                try{
+                    curr_ratio = a.get(data[i]['description'], ['cereal'], 0);
+                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+                        best_ratio = curr_ratio[0][0];
+                        best_idx = data[i].fdcId;
                     }
+                } catch(error){
+                    console.log(error);
                 }
             }
-            console.log('Best match: ', data.find(d => d.fdcId === data[best_idx].fdcId));
-            return data.find(d => d.fdcId === data[best_idx].fdcId)
+        }
+        let best_match = data.filter(d => d.fdcId === best_idx)
+        console.log('Best match: ', best_match);
+
+        if ((best_match).length===2){
+            let carbo_value = best_match.find(b => b.nutrientId===cte.ID_CARBO).value
+            let sugar_value = best_match.find(b => b.nutrientId===cte.ID_SUGARS).value
+            return {
+                        fdcId: best_idx, 
+                        description: best_match[0].description, 
+                        foodNutrients: [
+                            {nutrientId: cte.ID_CARBO, value: carbo_value},
+                            {nutrientId:cte.ID_SUGARS, value: sugar_value}
+                        ]
+                    }
         } else {
-            return 'Error'
+            return best_match[0]
         }
         
     }
 
     const findSugar = (item) => {
-        let sugar = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_SUGARS)
+        let sugar = item.foodNutrients.find((a) => a['nutrientId']===cte.ID_SUGARS)
         return sugar.value
     }
 
     const findCarbo = (item) => {
-        let carbo = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_CARBO)
+        let carbo = item.foodNutrients.find((a) => a['nutrientId']===cte.ID_CARBO)
         return carbo['value']
     }
 
@@ -69,24 +79,35 @@ export default function FoodInfo() {
         }
     };
 
+    // const backUpData = () => fetch('./food.json', {
+    //     headers: 
+    //         {'Content-Type': 'application/json','Accept': 'application/json'}
+    //     })
+    //     .then((response) => {
+    //     response.json().then((result) => {
+    //         const final_result = preprocessResponse(result['foods'])
+    //         setData(final_result)
+    //     })
+    // })
+
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
-            body: JSON.stringify({generalSearchInput: 'pizza'}),
+            body: JSON.stringify({generalSearchInput: 'cereal'}),
             headers: new Headers({'Content-Type': 'application/json'}),
         }
         let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC"
         fetch(url, requestOptions).then((response) => {
             response.json().then((result) => {
-                console.warn(result)
-                const final_result = preprocessResponse(result)
+                const final_result = preprocessResponse(result['foods'])
                 setData(final_result)
-                localStorage.setItem("foodInfo", JSON.stringify(final_result)) // store data for offline usage 
             })
-        }).catch(err => {
-            setMode('offline')
-            let collection = localStorage.getItem('foodInfo'); // get data from cache in offline modus
-            setData(JSON.parse(collection))
+        })        
+        .catch((err) => {
+            console.warn(err);
+            setMode('offline');
+            const final_result = preprocessResponse(backUpData)
+            setData(final_result)
         })
     }, [])
 
