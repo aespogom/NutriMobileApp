@@ -1,5 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import FoodInfo from './FoodInfo';
+import LoadModel from './LoadModel';
+import Model from './Model';
 import {TbRepeat} from 'react-icons/tb';
 import {FiCamera} from 'react-icons/fi';
 import {MdOutlineSendToMobile} from 'react-icons/md';
@@ -32,26 +34,9 @@ export default  function Home()
         })
     }
 
-    function loadModel() {
-        console.log('Loading Model');
-        const model = new window.KerasJS.Model({
-          filepaths: {
-            model: 'model.json' ,
-            weights: 'model4b.10-0.68_weights.buf',
-            metadata: 'model4b.10-0.68_metadata.json'
-          },
-        //   gpu: this.state.hasWebgl,
-          layerCallPauses: true
-        });
-
-        const waitTillReady = model.ready();
-        setModel(waitTillReady);
-
-    }
-
     useEffect(() => {
         getVideo();
-        loadModel();
+        // loadModel();
     }, [videoRef]);
 
     const takePhoto = () => {
@@ -84,6 +69,9 @@ export default  function Home()
 
     return (
         <div>
+            <div className='foodContainer'>
+                {hasFood ? <FoodInfo /> : null}
+            </div>
             <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
                 <video ref={videoRef}></video>
                 <button id="buttonSnap" onClick={takePhoto}>
@@ -97,6 +85,9 @@ export default  function Home()
             </div>
             <div className='foodContainer'>
                 {hasFood ? <FoodInfo /> : null}
+            </div>
+            <div className='foodContainer'>
+                {hasFood ? <LoadModel /> : null}
             </div>
         </div>
     )
