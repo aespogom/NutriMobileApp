@@ -4,16 +4,17 @@ import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 import Spinner from './Spinner';
 
-export default function FoodInfo(backUpData) {
+export default function FoodInfo(backUpData, food) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
     const [loading_info, setLoadingInfo] = useState(false);
 
+    console.log('foodinfo:', food.name_);
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
-        a.add('cereal');
+        a.add(food.name_);
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
@@ -82,22 +83,11 @@ export default function FoodInfo(backUpData) {
         }
     };
 
-    // const backUpData = () => fetch('./food.json', {
-    //     headers: 
-    //         {'Content-Type': 'application/json','Accept': 'application/json'}
-    //     })
-    //     .then((response) => {
-    //     response.json().then((result) => {
-    //         const final_result = preprocessResponse(result['foods'])
-    //         setData(final_result)
-    //     })
-    // })
-
     useEffect(() => {
         setLoadingInfo(true);
         const requestOptions = {
             method: 'POST',
-            body: JSON.stringify({generalSearchInput: 'cereal'}),
+            body: JSON.stringify({generalSearchInput: food.name_}),
             headers: new Headers({'Content-Type': 'application/json'}),
         }
         let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC"
