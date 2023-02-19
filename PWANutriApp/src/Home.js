@@ -3,17 +3,22 @@ import FoodInfo from './FoodInfo';
 import {TbRepeat} from 'react-icons/tb';
 import {FiCamera} from 'react-icons/fi';
 import {MdOutlineSendToMobile} from 'react-icons/md';
-
+import Spinner from './Spinner';
 
 export default  function Home()
 {
+    // Let var and const var --> let variables can change the value but constant dont
+    // UseState is a function that creates a constant and a function related to each other
+    // the function updates the value of the constant
+    // constants defined here will be available to any other function in the script
     const videoRef = useRef(null);
     const photoRef = useRef(null);
     const [hasPhoto, setHasPhoto] = useState(false);
     const [hasFood, setHasFood] = useState(false);
     const [backUpData, setBackUpData] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-
+    // Ask for camera permissions and displays the video in the screen
     const getVideo = () => {
         navigator.mediaDevices
         .getUserMedia({
@@ -29,9 +34,13 @@ export default  function Home()
         })
     }
 
+    // This is executed when the component is created for the first time
+    // The first thing that is going to be done when rendering the component
     useEffect(() => {
+        setLoading(true);
         getVideo();
         backUpDataFunction();
+        setLoading(false);
     }, [videoRef]);
 
     const takePhoto = () => {
@@ -62,18 +71,22 @@ export default  function Home()
         setHasFood(true);
     }
 
+    // We are requesting the local food info and storage in a global constant
     const backUpDataFunction = () => fetch('./food.json', {
         headers: 
             {'Content-Type': 'application/json','Accept': 'application/json'}
         })
         .then((response) => {
-        response.json().then((result) => {
-            setBackUpData(result)
-        })
+            response.json().then((result) => {
+                setBackUpData(result);
+            })
     })
 
     return (
         <div>
+            {loading &&
+                <Spinner />
+            }
             <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
                 <video ref={videoRef}></video>
                 <button id="buttonSnap" onClick={takePhoto}>

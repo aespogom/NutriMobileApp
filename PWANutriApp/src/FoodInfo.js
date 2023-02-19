@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { Table } from 'react-bootstrap'
 import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
+import Spinner from './Spinner';
 
 export default function FoodInfo(backUpData) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
+    const [loading_info, setLoadingInfo] = useState(false);
 
 
     const preprocessResponse = (data) => {
@@ -44,6 +46,7 @@ export default function FoodInfo(backUpData) {
         if ((best_match).length===2){
             let carbo_value = best_match.find(b => b.nutrientId===cte.ID_CARBO).value
             let sugar_value = best_match.find(b => b.nutrientId===cte.ID_SUGARS).value
+            // We are returning a dict objet (key-value) with the same structure than the API response
             return {
                         fdcId: best_idx, 
                         description: best_match[0].description, 
@@ -65,7 +68,7 @@ export default function FoodInfo(backUpData) {
 
     const findCarbo = (item) => {
         let carbo = item.foodNutrients.find((a) => a['nutrientId']===cte.ID_CARBO)
-        return carbo['value']
+        return carbo.value
     }
 
     const calcuInsuline = (event, item) => {
@@ -91,6 +94,7 @@ export default function FoodInfo(backUpData) {
     // })
 
     useEffect(() => {
+        setLoadingInfo(true);
         const requestOptions = {
             method: 'POST',
             body: JSON.stringify({generalSearchInput: 'cereal'}),
@@ -100,19 +104,24 @@ export default function FoodInfo(backUpData) {
         fetch(url, requestOptions).then((response) => {
             response.json().then((result) => {
                 const final_result = preprocessResponse(result['foods'])
-                setData(final_result)
+                setData(final_result);
+                setLoadingInfo(false);
             })
         })        
         .catch((err) => {
             console.warn(err);
             setMode('offline');
-            const final_result = preprocessResponse(backUpData)
-            setData(final_result)
+            const final_result = preprocessResponse(backUpData);
+            setData(final_result);
+            setLoadingInfo(false);
         })
     }, [])
 
     return (
         <div id="foodTable">
+            {loading_info &&
+                <Spinner />
+            }
             <div className='offline'>
                 {
                     mode === 'offline' ?

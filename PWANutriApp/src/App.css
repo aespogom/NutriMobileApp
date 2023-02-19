@@ -5,6 +5,11 @@
   font-family: 'Fira Sans', sans-serif;
 }
 
+/* Selectors: 1. * --> whole app, .{ClassName} --> html as className="App", #{ID} --> html as id='App', {selector} --> elements */
+/* classNames can be used in different elements from html, ID can only be used once in one element */
+/* !important makes the style to override anyother */
+/* @media can be used for responsiveness */
+
 .App {
   min-height: 100vh;
   position: relative;
@@ -175,3 +180,26 @@ input[type=number]::-webkit-outer-spin-button {
 #foodTable > table > tbody > tr > td {
   color: white;
 }
+
+/* Loading spinner */
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  z-index: 1000;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

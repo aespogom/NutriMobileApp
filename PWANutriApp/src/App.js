@@ -9,7 +9,7 @@ import {Link, Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id='App'>
       <Router>
       <Navbar className='App-header'>
           <Navbar.Brand href="/"><FaHome/></Navbar.Brand>
