@@ -97,7 +97,7 @@ export default function FoodInfo({backUpData, food}) {
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
-            body: JSON.stringify({generalSearchInput: food.name_}),
+            body: JSON.stringify({generalSearchInput: food}),
             headers: new Headers({'Content-Type': 'application/json'}),
         }
         let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC"
@@ -115,6 +115,7 @@ export default function FoodInfo({backUpData, food}) {
             setData(final_result);
             setLoadingInfo(false);
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

@@ -7,6 +7,7 @@ import Spinner from './Spinner';
 import ndarray from 'ndarray';
 import ops from 'ndarray-ops';
 import { food101topK } from './utils';
+import data from './utils/food.json';
 
 export default  function Home(){
     
@@ -98,6 +99,7 @@ export default  function Home(){
     backUpDataFunction();
     loadModel();
     setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoRef]);
 
   const takePhoto = () => {
@@ -185,15 +187,11 @@ export default  function Home(){
   }
 
   // We are requesting the local food info and storage in a global constant
-  const backUpDataFunction = () => fetch('./food.json', {
-    headers: 
-      {'Content-Type': 'application/json','Accept': 'application/json'}
-    })
-    .then((response) => {
-      response.json().then((result) => {
-        setBackUpData(result);
-      })
-    })
+  const backUpDataFunction = () => {
+    setBackUpData(data.map((data) => {
+      return data
+    }))
+  }
 
   return (
     <div>
