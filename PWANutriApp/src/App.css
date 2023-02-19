@@ -13,7 +13,7 @@
 .App {
   min-height: 100vh;
   position: relative;
-  background-color: #98A6D4;
+  background-color: #dddbda;
   overflow: hidden;
 }
 
@@ -92,7 +92,7 @@
   width: 50vw;
   display: flex;
   align-items: center;
-  background-color: #98A6D4
+  background-color: #dddbda
 }
 
 .result.hasPhoto {
@@ -185,14 +185,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .loader {
   border: 10px solid #f3f3f3;
-  border-top: 10px solid #3498db;
+  border-top: 10px solid #C2F970;
   border-radius: 50%;
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
   position: absolute;
-  left: 50vw;
-  top: 50vh;
+  left: 30%;
+  top: 30%;
   z-index: 1000;
 }
 @keyframes spin {

@@ -8,7 +8,7 @@ export default function FoodInfo({backUpData, food}) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
-    const [loading_info, setLoadingInfo] = useState(false);
+    const [loading_info, setLoadingInfo] = useState(true);
 
     console.log('foodinfo:', food);
 
@@ -18,27 +18,38 @@ export default function FoodInfo({backUpData, food}) {
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
+        // for (let i=0; i< data.length; i++){
+        //     if (data[i]['dataType']==='Branded'){
+        //         try{
+        //             curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food], 0);
+        //             if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+        //                 best_ratio = curr_ratio[0][0];
+        //                 best_idx = data[i].fdcId;
+        //             }
+        //         } catch(error){
+        //             console.log(error);
+        //         }
+        //     } else {
+        //         try{
+        //             curr_ratio = a.get(data[i]['description'], [food], 0);
+        //             if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+        //                 best_ratio = curr_ratio[0][0];
+        //                 best_idx = data[i].fdcId;
+        //             }
+        //         } catch(error){
+        //             console.log(error);
+        //         }
+        //     }
+        // }
         for (let i=0; i< data.length; i++){
-            if (data[i]['dataType']==='Branded'){
-                try{
-                    curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food], 0);
-                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-                        best_ratio = curr_ratio[0][0];
-                        best_idx = data[i].fdcId;
-                    }
-                } catch(error){
-                    console.log(error);
+            try{
+                curr_ratio = a.get(data[i]['description'], [food], 0);
+                if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+                    best_ratio = curr_ratio[0][0];
+                    best_idx = data[i].fdcId;
                 }
-            } else {
-                try{
-                    curr_ratio = a.get(data[i]['description'], [food], 0);
-                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-                        best_ratio = curr_ratio[0][0];
-                        best_idx = data[i].fdcId;
-                    }
-                } catch(error){
-                    console.log(error);
-                }
+            } catch(error){
+                console.log(error);
             }
         }
         let best_match = data.filter(d => d.fdcId === best_idx)
@@ -84,7 +95,6 @@ export default function FoodInfo({backUpData, food}) {
     };
 
     useEffect(() => {
-        setLoadingInfo(true);
         const requestOptions = {
             method: 'POST',
             body: JSON.stringify({generalSearchInput: food.name_}),

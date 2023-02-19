@@ -43,7 +43,7 @@ export default  function Home(){
   const [hasPhoto, setHasPhoto] = useState(false);
   const [hasFood, setHasFood] = useState(false);
   const [backUpData, setBackUpData] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [model, setModel] = useState(false);
   const [foodpred, setFoodPred] = useState(undefined);
 
@@ -94,7 +94,6 @@ export default  function Home(){
   }
 
   useEffect(() => {
-    setLoading(true);
     getVideo();
     backUpDataFunction();
     loadModel();
@@ -122,6 +121,8 @@ export default  function Home(){
   }
 
   const runModel = () => {
+    setLoading(true);
+
     console.log('Running Model');
 
     let photo = photoRef.current;
@@ -164,12 +165,12 @@ export default  function Home(){
     const predPromise = model.predict(inputData);
 
     setFoodPred(predPromise.then(outputData => {
-      // console.log(outputData);
       const preds = outputData['dense_1'];
       const bestpred = food101topK(preds)[0].name;
-      console.log(bestpred)
+      console.log(bestpred);
       setFoodPred(bestpred);
       setHasFood(true);
+      setLoading(false);
       return bestpred
     }));
   }
