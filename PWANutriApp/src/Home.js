@@ -45,7 +45,7 @@ export default  function Home(){
   const [backUpData, setBackUpData] = useState(false);
   const [loading, setLoading] = useState(false);
   const [model, setModel] = useState(false);
-  const [foodpred, setFoodPred] = useState(false);
+  const [foodpred, setFoodPred] = useState(undefined);
 
   // Ask for camera permissions and displays the video in the screen
   const getVideo = () => {
@@ -163,14 +163,15 @@ export default  function Home(){
     const inputData = { input_1: dataProcessedTensor.data };
     const predPromise = model.predict(inputData);
 
-    predPromise.then(outputData => {
+    setFoodPred(predPromise.then(outputData => {
       // console.log(outputData);
       const preds = outputData['dense_1'];
       const bestpred = food101topK(preds)[0].name;
       console.log(bestpred)
       setFoodPred(bestpred);
       setHasFood(true);
-    });
+      return bestpred
+    }));
   }
 
   const sendAndClosePhoto = () => {
@@ -209,7 +210,7 @@ export default  function Home(){
         <button onClick={sendAndClosePhoto} style={ hasPhoto ? {display:'block'} : {display:'none'}} ><MdOutlineSendToMobile/></button>
       </div>
       <div className='foodContainer'>
-        {hasFood ? <FoodInfo backUpData={backUpData} name_={foodpred} /> : null}
+        {hasFood && foodpred ? <FoodInfo backUpData={backUpData} food={foodpred} /> : null}
       </div>
     </div>
   )

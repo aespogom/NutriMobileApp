@@ -4,24 +4,24 @@ import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 import Spinner from './Spinner';
 
-export default function FoodInfo(backUpData, food) {
+export default function FoodInfo({backUpData, food}) {
     const [data, setData] = useState(undefined)
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
     const [loading_info, setLoadingInfo] = useState(false);
 
-    console.log('foodinfo:', food.name_);
+    console.log('foodinfo:', food);
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
-        a.add(food.name_);
+        a.add(food);
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
         for (let i=0; i< data.length; i++){
             if (data[i]['dataType']==='Branded'){
                 try{
-                    curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], ['cereal'], 0);
+                    curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food], 0);
                     if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
                         best_ratio = curr_ratio[0][0];
                         best_idx = data[i].fdcId;
@@ -31,7 +31,7 @@ export default function FoodInfo(backUpData, food) {
                 }
             } else {
                 try{
-                    curr_ratio = a.get(data[i]['description'], ['cereal'], 0);
+                    curr_ratio = a.get(data[i]['description'], [food], 0);
                     if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
                         best_ratio = curr_ratio[0][0];
                         best_idx = data[i].fdcId;
