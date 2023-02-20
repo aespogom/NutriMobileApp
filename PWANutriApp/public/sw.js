@@ -3,7 +3,7 @@ let cacheData = "appV1";
 this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
-            cache.addAll([
+            return cache.addAll([
                 '/static/js/main.chunk.js',
                 '/static/js/0.chunk.js',
                 '/static/js/bundle.js',
@@ -11,10 +11,15 @@ this.addEventListener("install", (event) => {
                 '/bootstrap.min.css',
                 '/index.html',
                 '/',
-                "/users"
-            ])
+                "/home"
+            ]).then(() => this.skipWaiting());
         })
-    )
+    );
+});
+
+this.addEventListener('activate', event => {
+    console.warn('Activating service worker');
+    event.waitUntil(this.clients.claim());
 })
 
 //fetch from cache for offline modus
@@ -32,5 +37,19 @@ this.addEventListener("fetch", (event)=>{
                 fetch(requestUrl)
             })
         )
+    }
+    else {
+        var fetchRequest = event.request.clone();
+        return fetch(fetchRequest).then((response)=>{
+            if (!response || response.status !== 200 || response.type !== 'basic'){
+                return response
+            }
+
+            var responseToCache = response.clone();
+            caches.open(cacheData).then((cache)=> {
+                cache.put(event.request, responseToCache)
+            });
+            return response
+        })
     }
 })
