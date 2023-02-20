@@ -24,6 +24,7 @@ this.addEventListener('activate', event => {
 
 //fetch from cache for offline modus
 this.addEventListener("fetch", (event)=>{
+
     if(!navigator.online)
     {
         event.respondWith(
@@ -53,3 +54,36 @@ this.addEventListener("fetch", (event)=>{
         })
     }
 })
+
+// Respond to a server push with a user notification.
+this.addEventListener('push', (event) => {
+    if (Notification.permission === "granted") {
+        const notificationText = event.data.text();
+        const showNotification = navigator.serviceWorker.ready.then((r) => {
+            r.showNotification('Sample PWA', {
+                body: notificationText
+            });
+        })
+        // Make sure the toast notification is displayed.
+        event.waitUntil(showNotification);
+    }
+});
+
+// Respond to the user selecting the toast notification.
+this.addEventListener('notificationclick', (event) => {
+    console.log('On notification click: ', event.notification.tag);
+    event.notification.close();
+
+    // Display the current notification if it is already open, and then put focus on it.
+    event.waitUntil(clients.matchAll({
+        type: 'window'
+    }).then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+            var client = clientList[i];
+            if (client.url == 'http://localhost:3000/' && 'focus' in client)
+                return client.focus();
+        }
+        if (clients.openWindow)
+            return clients.openWindow('/');
+    }));
+});

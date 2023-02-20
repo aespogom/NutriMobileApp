@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1a1ebc-e7f5-4de5-8d13-ef2d45b3c8c2" name="Changes" comment="Camera permission">
-      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/src/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutriApp/src/utils/translations/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/NutriApp/src/utils/translations/translations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PWANutriApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/PWANutriApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PWANutriApp/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/PWANutriApp/public/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PWANutriApp/src/swDev.js" beforeDir="false" afterPath="$PROJECT_DIR$/PWANutriApp/src/swDev.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,26 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DEBUGGABLE_DEVICE": "Pixel_2_API_31 [emulator-5554]",
-    "DEBUGGABLE_PROCESS": "com.nutriapp",
-    "DEBUGGER_ID": "Java",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHOW_ALL_PROCESSES": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/anaes/StudioProjects/NutriMobileApp",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Pixel_2_API_31 [emulator-5554]&quot;,
+    &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.nutriapp&quot;,
+    &quot;DEBUGGER_ID&quot;: &quot;Java&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHOW_ALL_PROCESSES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anaes/StudioProjects/NutriMobileApp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anaes\StudioProjects\NutriMobileApp\NutriApp" />
