@@ -116,6 +116,7 @@ def nutrition_retrieval(food_list, fdcIDs, api_key=api_key):
         requested_url = USDA_URL + fdcId + '?api_key=' + api_key
         response = requests.get(requested_url, headers=headers)
         parsed = json.loads(response.content)
+        print(parsed)
         trans_fat = 0
         trans_fat_poly = 0
         trans_fat_mono = 0
@@ -234,10 +235,10 @@ def nutrient_preprocessing(dataframe):
     return dataframe
 
 # usage 
-# food_list = ['pizza', 'apple pie', 'lemonade', 'watermelon']
-# fdcIDs = fdcID_retrieval(food_list)
-# api_key = 'iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC'
+food_list = ['pizza', 'apple pie', 'lemonade', 'watermelon']
+fdcIDs = fdcID_retrieval(food_list)
+api_key = 'iJAojYSzmXpQ7wsfdz3cOFL7ANOxIMu2Kjs22KRC'
 
-# nutrient_df = nutrition_retrieval(food_list, fdcIDs=fdcIDs, api_key=api_key)
-# nutrient_df = nutrient_preprocessing(nutrient_df)
-# print(nutrient_df)
+nutrient_df = nutrition_retrieval(food_list, fdcIDs=fdcIDs, api_key=api_key)
+nutrient_df = nutrient_preprocessing(nutrient_df)
+print(nutrient_df)
