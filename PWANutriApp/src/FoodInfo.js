@@ -9,8 +9,10 @@ export default function FoodInfo({backUpData, food}) {
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
     const [loading_info, setLoadingInfo] = useState(true);
+    const [newfoodname, setNewFoodName] = useState('');
 
     console.log('foodinfo:', food);
+    console.log('foodinfonew:', newfoodname);
 
     const preprocessResponse = (data) => {
         let a = FuzzySet();
@@ -18,40 +20,40 @@ export default function FoodInfo({backUpData, food}) {
         let best_ratio = 0;
         let best_idx = 0;
         let curr_ratio = 0;
-        // for (let i=0; i< data.length; i++){
-        //     if (data[i]['dataType']==='Branded'){
-        //         try{
-        //             curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food], 0);
-        //             if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-        //                 best_ratio = curr_ratio[0][0];
-        //                 best_idx = data[i].fdcId;
-        //             }
-        //         } catch(error){
-        //             console.log(error);
-        //         }
-        //     } else {
-        //         try{
-        //             curr_ratio = a.get(data[i]['description'], [food], 0);
-        //             if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-        //                 best_ratio = curr_ratio[0][0];
-        //                 best_idx = data[i].fdcId;
-        //             }
-        //         } catch(error){
-        //             console.log(error);
-        //         }
-        //     }
-        // }
         for (let i=0; i< data.length; i++){
-            try{
-                curr_ratio = a.get(data[i]['description'], [food], 0);
-                if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
-                    best_ratio = curr_ratio[0][0];
-                    best_idx = data[i].fdcId;
+            if (data[i]['dataType']==='Branded'){
+                try{
+                    curr_ratio = a.get(data[i]['brandOwner']+' '+data[i]['description'], [food], 0);
+                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+                        best_ratio = curr_ratio[0][0];
+                        best_idx = data[i].fdcId;
+                    }
+                } catch(error){
+                    console.log(error);
                 }
-            } catch(error){
-                console.log(error);
+            } else {
+                try{
+                    curr_ratio = a.get(data[i]['description'], [food], 0);
+                    if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+                        best_ratio = curr_ratio[0][0];
+                        best_idx = data[i].fdcId;
+                    }
+                } catch(error){
+                    console.log(error);
+                }
             }
         }
+        // for (let i=0; i< data.length; i++){
+        //     try{
+        //         curr_ratio = a.get(data[i]['description'], [food], 0);
+        //         if (curr_ratio !== null && curr_ratio[0][0] > best_ratio){
+        //             best_ratio = curr_ratio[0][0];
+        //             best_idx = data[i].fdcId;
+        //         }
+        //     } catch(error){
+        //         console.log(error);
+        //     }
+        // }
         let best_match = data.filter(d => d.fdcId === best_idx)
         console.log('Best match: ', best_match);
 
@@ -84,6 +86,7 @@ export default function FoodInfo({backUpData, food}) {
     }
 
     const calcuInsuline = (event, item) => {
+        console.log('event:', event);
         // https://www.diabeteseducationandresearchcenter.org/news/type-2-diabetes-how-to-calculate-insulin-doses
         let CHO = item['foodNutrients'].find((a) => a['nutrientId']===cte.ID_CARBO).value / cte.CHO_ratio
         if (event.target.value > 120){
@@ -94,7 +97,7 @@ export default function FoodInfo({backUpData, food}) {
         }
     };
 
-    useEffect(() => {
+    const setAndDisplayData = (food) => {
         const requestOptions = {
             method: 'POST',
             body: JSON.stringify({generalSearchInput: food}),
@@ -116,7 +119,19 @@ export default function FoodInfo({backUpData, food}) {
             setLoadingInfo(false);
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+
+    useEffect(() => {
+        setAndDisplayData(food);
     }, [])
+
+    const newFoodName = (name) => {
+        setNewFoodName(name.target.value);
+    }
+
+    const newData = (data) => {
+        setData(data);
+    }
 
     return (
         <div id="foodTable">
@@ -162,6 +177,13 @@ export default function FoodInfo({backUpData, food}) {
                     <p> Insuline dose: {insulineDose} </p>
                 </div>
             }
+
+            <div className="input-group">
+                <label>Enter Manually</label>
+                <input onKeyDown={(event) => setAndDisplayData(event.target.value)} />
+            </div>
         </div>
     )
 }
+
+// {newfoodname && <button>onClick={newData(newfoodname)}</button>}
