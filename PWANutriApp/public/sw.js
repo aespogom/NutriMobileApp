@@ -48,23 +48,34 @@ this.addEventListener("fetch", (event)=>{
     }
     else {
         var fetchRequest = event.request.clone();
-        
-        return fetch(fetchRequest).then((response)=>{
-            if (!response || response.status !== 200 || response.type !== 'basic'){
-                var responseToCache = response.clone();
-                caches.open(cacheData).then((cache)=> {
-                cache.put(event.request.url, responseToCache)
-                console.warn("adding request to cache:", event.request.url)
-            });
-                return response
+
+        caches.match(event.request.url).then((resp)=>{
+            if(resp)
+            {
+                console.log('cache response:', resp)
+                return resp
             }
 
-            var responseToCache = response.clone();
-            caches.open(cacheData).then((cache)=> {
-                cache.put(event.request, responseToCache)
-                console.warn("adding request to cache:", responseToCache)
-            });
-            return response
+            else
+            {
+                return fetch(fetchRequest).then((response)=>{
+                    if (!response || response.status !== 200 || response.type !== 'basic'){
+                        var responseToCache = response.clone();
+                        caches.open(cacheData).then((cache)=> {
+                        cache.put(event.request.url, responseToCache)
+                        console.warn("adding request to cache:", event.request.url)
+                    });
+                        return response
+                    }
+        
+                    var responseToCache = response.clone();
+                    caches.open(cacheData).then((cache)=> {
+                        cache.put(event.request, responseToCache)
+                        console.warn("adding request to cache:", responseToCache)
+                    });
+                    return response
+                })
+            }
         })
     }
 })
