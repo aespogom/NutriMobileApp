@@ -9,11 +9,9 @@ export default function FoodInfo({backUpData, food}) {
     const [mode, setMode] = useState('online');
     const [insulineDose, setInsuline] = useState('');
     const [loading_info, setLoadingInfo] = useState(true);
-    const [newfoodname, setNewFoodName] = useState('');
 
     console.log('foodinfo:', food);
-    console.log('foodinfonew:', newfoodname);
-
+    
     const preprocessResponse = (data) => {
         let a = FuzzySet();
         a.add(food);
@@ -123,15 +121,8 @@ export default function FoodInfo({backUpData, food}) {
 
     useEffect(() => {
         setAndDisplayData(food);
-    }, [])
-
-    const newFoodName = (name) => {
-        setNewFoodName(name.target.value);
-    }
-
-    const newData = (data) => {
-        setData(data);
-    }
+        // eslint-disable-next-line
+    }, [food])
 
     return (
         <div id="foodTable">
@@ -185,5 +176,3 @@ export default function FoodInfo({backUpData, food}) {
         </div>
     )
 }
-
-// {newfoodname && <button>onClick={newData(newfoodname)}</button>}
