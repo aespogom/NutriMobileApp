@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App" id='App'>
       <Router>
-      <Navbar className='App-header'>
+      <Navbar bg="light" variant="light">
           <Navbar.Brand href="/"><FaHome/></Navbar.Brand>
           <Navbar.Brand>NutriApp</Navbar.Brand>
       </Navbar>

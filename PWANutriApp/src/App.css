@@ -47,12 +47,12 @@
 }
 
 .navbar-brand {
-  color: white !important;
+  color: black !important;
   font-weight: 700 !important;
 }
 
 .navbar a:hover{
-  color: white; 
+  color: grey; 
   font-size: 4vh;
   transition: 1s ease-out;
 }
@@ -116,10 +116,10 @@ button {
   outline: none;
 
   padding: 8px 16px;
-  background-image: linear-gradient(to right, #D3FCD5, #C2F970 50%);
+  background-image: linear-gradient(to right, white, white 50%);
   background-position: 0%;
   background-size: 200%;
-  color: #fff;
+  color: black;
   font-size: 24px;
   font-weight: 700;
   transition: 0.4s;
@@ -172,7 +172,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #foodTable > table {
-  background-color: #564D80;
+  background-color: grey;
   border-radius: 1vh;
   color: white;
   font-weight: 700;
@@ -185,7 +185,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .loader {
   border: 10px solid #f3f3f3;
-  border-top: 10px solid #C2F970;
+  border-top: 10px solid grey;
   border-radius: 50%;
   width: 80px;
   height: 80px;

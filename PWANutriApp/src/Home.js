@@ -8,6 +8,7 @@ import ndarray from 'ndarray';
 import ops from 'ndarray-ops';
 import { food101topK } from './utils';
 import data from './utils/food.json';
+import Button from 'react-bootstrap/Button';
 
 export default  function Home(){
     
@@ -200,9 +201,9 @@ export default  function Home(){
       }
       <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
         <video ref={videoRef}></video>
-        <button id="buttonSnap" onClick={takePhoto}>
+        <Button  variant="outline-dark" id="buttonSnap" onClick={takePhoto}>
           {hasPhoto ? <TbRepeat/> : <FiCamera/>}
-        </button>
+        </Button>
       </div>
       <div id='photoElement' className={'cameraElement result' + (hasPhoto ? ' hasPhoto' : '')}>
         <canvas ref={photoRef}></canvas>
