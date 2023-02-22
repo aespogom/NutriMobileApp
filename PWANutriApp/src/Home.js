@@ -52,7 +52,7 @@ export default  function Home(){
   const getVideo = () => {
     navigator.mediaDevices
     .getUserMedia({
-      video: {width: 1920, height: 1080}
+      video: {width: 1920, height: 1080, facingMode: 'environment'}
     })
     .then(stream => {
       let video = videoRef.current;
