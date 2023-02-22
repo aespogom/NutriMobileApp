@@ -13,10 +13,12 @@ this.addEventListener("install", (event) => {
                 '/',
                 "/home",
                 "/favicon.ico",
-                "/manifest.json"
+                "/manifest.json",
+                "public/logo192.png"
             ]).then(() => this.skipWaiting());
         })
     );
+    console.warn("added basic stuff to cache")
 });
 
 this.addEventListener('activate', event => {
@@ -32,9 +34,10 @@ this.addEventListener("fetch", (event)=>{
     if(!navigator.onLine)
     {
         event.respondWith(
-            caches.match(event.request).then((resp)=>{
+            caches.match(event.request.url).then((resp)=>{ // also check only revent.request? 
                 if(resp)
                 {
+                    console.log('cache response:', resp)
                     return resp
                 }
                 // rerender code 
@@ -45,14 +48,21 @@ this.addEventListener("fetch", (event)=>{
     }
     else {
         var fetchRequest = event.request.clone();
+        
         return fetch(fetchRequest).then((response)=>{
             if (!response || response.status !== 200 || response.type !== 'basic'){
+                var responseToCache = response.clone();
+                caches.open(cacheData).then((cache)=> {
+                cache.put(event.request.url, responseToCache)
+                console.warn("adding request to cache:", event.request.url)
+            });
                 return response
             }
 
             var responseToCache = response.clone();
             caches.open(cacheData).then((cache)=> {
                 cache.put(event.request, responseToCache)
+                console.warn("adding request to cache:", responseToCache)
             });
             return response
         })
