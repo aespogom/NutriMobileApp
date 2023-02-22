@@ -14,7 +14,10 @@ this.addEventListener("install", (event) => {
                 "/home",
                 "/favicon.ico",
                 "/manifest.json",
-                "public/logo192.png"
+                "public/logo192.png",
+                "public/keras.js",
+                "keras.js",
+                "https://cdn.rawgit.com/blueimp/JavaScript-Load-Image/v2.6.2/js/load-image.all.min.js"
             ]).then(() => this.skipWaiting());
         })
     );
