@@ -85,12 +85,10 @@ export default  function Home(){
     const waitTillReady = model.ready();
 
     waitTillReady.then(() => {
-      clearInterval(interval);
       console.log('Model ready');
       setModel(model);
     })
     .catch(err => {
-      clearInterval(interval);
       console.log('err', err);
     });
   }
