@@ -9,9 +9,12 @@ import ops from 'ndarray-ops';
 import { food101topK } from './utils';
 import data from './utils/food.json';
 import Button from 'react-bootstrap/Button';
+import * as cte from './utils/constants'
+
 
 export default  function Home(){
-    
+  
+  // Constants that will be used in the whole component
   let hasWebgl = false;
   const canvas = document.createElement('canvas');
   const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -66,6 +69,8 @@ export default  function Home(){
   }
 
   const loadModel = () => {
+    // This function loads the food recognition mode
+
     console.log('Loading Model');
     const model = new window.KerasJS.Model({
       filepaths: {
@@ -76,11 +81,6 @@ export default  function Home(){
       gpu: state.hasWebgl,
       layerCallPauses: true
     });
-
-    let interval = setInterval(() => {
-      const percent = model.getLoadingProgress();
-      console.log('Progress', percent, model.xhrProgress);
-    }, 100);
 
     const waitTillReady = model.ready();
 
@@ -96,20 +96,21 @@ export default  function Home(){
   }
 
   useEffect(() => {
-    getVideo();
-    backUpDataFunction();
-    loadModel();
-    setLoading(false);
+    getVideo(); // Opens camera
+    backUpDataFunction(); // Loads the local copy of the database
+    loadModel(); // Loads food recognition model
+    setLoading(false); // Stops spinner
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoRef]);
 
   const takePhoto = () => {
+    // This function snaps a photo when button in clicked
+
     setHasPhoto(false);
     setHasFood(false);
     
-    // If these numbers change, the model wont work. We need these dimensions
-    const width = 299;
-    const height = 299;
+    const width = cte.width;
+    const height = cte.height;
 
     let video = videoRef.current;
     let photo = photoRef.current;
@@ -124,9 +125,11 @@ export default  function Home(){
   }
 
   const runModel = () => {
-    setLoading(true);
+    // This function runs the food recognition model once there is a photo
 
-    console.log('Running Model');
+    // Returns: A string for the dish name with highest probability
+
+    setLoading(true);
 
     let photo = photoRef.current;
     let ctx = photo.getContext('2d');
@@ -169,26 +172,29 @@ export default  function Home(){
 
     setFoodPred(predPromise.then(outputData => {
       const preds = outputData['dense_1'];
-      const bestpred = food101topK(preds)[0].name;
-      console.log(bestpred);
+      const bestpred = food101topK(preds)[0].name; // Sort the result by probability
       setFoodPred(bestpred);
       setHasFood(true);
-      setLoading(false);
+      setLoading(false); // Stops spinner
       return bestpred
     }));
   }
 
   const sendAndClosePhoto = () => {
+    // This function starts the food recognition process and clear the photo
+
     runModel();
     let photo = photoRef.current;
     let ctx = photo.getContext('2d');
     ctx.clearRect(0,0,photo.width, photo.height);
-    console.log(foodpred);
     setHasPhoto(false);
   }
 
-  // We are requesting the local food info and storage in a global constant
   const backUpDataFunction = () => {
+    // This function loads the local copy of the database
+
+    // Returns: A JSON object with the nutritional information
+
     setBackUpData(data.map((data) => {
       return data
     }))

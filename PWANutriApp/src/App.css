@@ -1,3 +1,5 @@
+/* This file contains the style (CSS) for the whole application */
+
 *{
   margin: 0;
   padding: 0;
@@ -5,9 +7,14 @@
   font-family: 'Fira Sans', sans-serif;
 }
 
-/* Selectors: 1. * --> whole app, .{ClassName} --> html as className="App", #{ID} --> html as id='App', {selector} --> elements */
-/* classNames can be used in different elements from html, ID can only be used once in one element */
-/* !important makes the style to override anyother */
+/* Possible selectors order from lower to higher priority:
+  * --> affects the whole app
+  .{ClassName} --> as className="App"
+  #{ID} --> as id='App'
+  {selector} --> elements 
+*/
+/* classNames can be used in different elements from html, ID should be only used once in one element */
+/* !important makes the style to override any other */
 /* @media can be used for responsiveness */
 
 .App {

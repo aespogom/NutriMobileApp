@@ -1,8 +1,10 @@
+// This script defines the service workers
 
 let cacheData = "appV1";
 this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
+            // What will be stored in the cache
             return cache.addAll([
                 '/static/js/main.chunk.js',
                 '/static/js/0.chunk.js',
@@ -21,18 +23,19 @@ this.addEventListener("install", (event) => {
             ]).then(() => this.skipWaiting());
         })
     );
-    console.warn("added basic stuff to cache")
 });
 
 this.addEventListener('activate', event => {
+    // This function activates the service workers
+
     console.warn('Activating service worker');
     event.waitUntil(this.clients.claim());
 })
 
-//fetch from cache for offline modus
 this.addEventListener("fetch", (event)=>{
-
-    if (event.request )
+    // This function intercepts any request done in the app
+    // If the request has been done before, the response from the cache is returned
+    // If the app is online and the request has been never done before, the response is stored in the cache
 
     if(!navigator.onLine)
     {
@@ -82,36 +85,3 @@ this.addEventListener("fetch", (event)=>{
         })
     }
 })
-
-// // Respond to a server push with a user notification.
-// this.addEventListener('push', (event) => {
-//     if (Notification.permission === "granted") {
-//         const notificationText = event.data.text();
-//         const showNotification = navigator.serviceWorker.ready.then((r) => {
-//             r.showNotification('Sample PWA', {
-//                 body: notificationText
-//             });
-//         })
-//         // Make sure the toast notification is displayed.
-//         event.waitUntil(showNotification);
-//     }
-// });
-
-// // Respond to the user selecting the toast notification.
-// this.addEventListener('notificationclick', (event) => {
-//     console.log('On notification click: ', event.notification.tag);
-//     event.notification.close();
-
-//     // Display the current notification if it is already open, and then put focus on it.
-//     event.waitUntil(clients.matchAll({
-//         type: 'window'
-//     }).then(function (clientList) {
-//         for (var i = 0; i < clientList.length; i++) {
-//             var client = clientList[i];
-//             if (client.url == 'http://localhost:3000/' && 'focus' in client)
-//                 return client.focus();
-//         }
-//         if (clients.openWindow)
-//             return clients.openWindow('/');
-//     }));
-// });

@@ -1,3 +1,5 @@
+# This script is used to extract a local copy of USDA National Nutrient Database
+
 import csv
 import json
 import pandas as pd
