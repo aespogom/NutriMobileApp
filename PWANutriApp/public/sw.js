@@ -37,28 +37,28 @@ this.addEventListener("fetch", (event)=>{
     // If the request has been done before, the response from the cache is returned
     // If the app is online and the request has been never done before, the response is stored in the cache
 
-    if(!navigator.onLine)
+    if(!navigator.onLine) // OFFLINE MODE
     {
         event.respondWith(
             caches.match(event.request.url).then((resp)=>{ // also check only revent.request? 
                 if(resp)
                 {
-                    console.log('cache response:', resp)
+                    // Returns cache response
                     return resp
                 }
-                // rerender code 
+                // Retries the request
                 let requestUrl = event.request.clone()
                 fetch(requestUrl)
             })
         )
     }
-    else {
+    else { // ONLINE MODE
         var fetchRequest = event.request.clone();
 
         caches.match(event.request.url).then((resp)=>{
             if(resp)
             {
-                console.log('cache response:', resp)
+                // Returns cache respon
                 return resp
             }
 
@@ -66,11 +66,12 @@ this.addEventListener("fetch", (event)=>{
             {
                 return fetch(fetchRequest).then((response)=>{
                     if (!response || response.status !== 200 || response.type !== 'basic'){
+                        // Adding to cache the response from online mode
                         var responseToCache = response.clone();
                         caches.open(cacheData).then((cache)=> {
-                        cache.put(event.request.url, responseToCache)
-                        console.warn("adding request to cache:", event.request.url)
-                    });
+                            cache.put(event.request.url, responseToCache)
+                            console.warn("adding request to cache:", event.request.url)
+                        });
                         return response
                     }
         
