@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap'
 import FuzzySet from 'fuzzyset';
 import * as cte from './utils/constants'
 import Spinner from './Spinner';
+import Form from 'react-bootstrap/Form';
 
 export default function FoodInfo({backUpData, food}) {
     // Constants that will be used in the whole component
@@ -132,54 +133,64 @@ export default function FoodInfo({backUpData, food}) {
     }, [food])
 
     return (
-        <div id="foodTable">
-            {loading_info &&
-                <Spinner />
-            }
-            <div className='offline'>
-                {
-                    mode === 'offline' ?
+        <div>
+            <div className='mb-5'>
+                {loading_info &&
+                    <div className='d-flex justify-content-center py-5'>
+                        <Spinner />
+                    </div>
+                }
+                {mode === 'offline' ??
+                    <div className='offline'>
                         <div className="alert alert-warning" role="alert">
-                            you are in offline mode or some issue with connection
+                            You are in offline mode or there is an issue with connection
                         </div>
-                        : null
-
+                    </div>
+                }
+                { data &&
+                    <div>
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Description</th>
+                                    <th>Sugars (g)</th>
+                                    <th>Carbohydrates (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td key="id">{data.fdcId}</td>
+                                    <td key="description">{data.description}</td>
+                                    <td key="sugars">{findSugar(data)}</td>
+                                    <td key="carbo">{findCarbo(data)}</td>
+                                </tr>
+                                
+                            </tbody>
+                        </Table>
+                        <Form.Group controlId="manually">
+                            <Form.Control placeholder='Incorrect? please enter the food manually here and press enter...' onKeyDown={(event) => event.keyCode == 13 ? setAndDisplayData(event.target.value) : null} />
+                        </Form.Group>
+                    </div>
                 }
             </div>
-            { data &&
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Description</th>
-                            <th>Sugars (g)</th>
-                            <th>Carbohydrates (g)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td key="id">{data.fdcId}</td>
-                            <td key="description">{data.description}</td>
-                            <td key="sugars">{findSugar(data)}</td>
-                            <td key="carbo">{findCarbo(data)}</td>
-                        </tr>
-                        
-                    </tbody>
-                </Table>
-            }
+
             {data && 
-                <div className="input-group">
-                    <label htmlFor="glucose">Glucose level</label>
-                    <input type="number" id="glucose" onChange={(event) => calcuInsuline(event, data)} />
-                    <p> Insuline dose: {insulineDose} </p>
+                <div>
+                    <h2 className='h5'>Please enter your glucose level</h2>
+                    <div className='mb-5'>
+                        <Form.Group className="mb-3" controlId="glucose">
+                            <Form.Label>Glucose level (in mmol/l)</Form.Label>
+                            <Form.Control type="number" placeholder='6,5' onChange={(event) => calcuInsuline(event, data)} />
+                        </Form.Group>
+                    </div>
+
+                    {insulineDose &&
+                        <h2 className='h5 fw-bold text-decoration-underline text-center mb-5'>You should administer {insulineDose} doses of insulin.</h2>
+                    }
                 </div>
             }
-
-            <div className="input-group">
-                <label>Enter Manually</label>
-                <input onKeyDown={(event) => setAndDisplayData(event.target.value)} />
-            </div>
         </div>
     )
 }

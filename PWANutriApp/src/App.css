@@ -58,17 +58,6 @@
   font-weight: 700 !important;
 }
 
-.navbar a:hover{
-  color: grey; 
-  font-size: 4vh;
-  transition: 1s ease-out;
-}
-
-.navbar a{
-  color: #ddd;
-  padding: 0 0 0 5vw;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -79,18 +68,6 @@
 }
 
 /* Camera component */
-
-.cameraElement {
-  position: relative;
-  max-width: 50vw;
-  top: 10vh;
-  left: 0;
-}
-
-.cameraElement.center {
-  left: 25vw;
-  transition: 0.4s;
-}
 
 .result {
   position: absolute;
@@ -106,90 +83,23 @@
   left: 50vw;
 }
 
-video{
-  width: 50vw;
-  height: auto;
-  border-radius: 3rem;
-}
-
-button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-
-  appearance: none;
-  border: none;
-  border-radius: 3rem !important;
-  outline: none;
-
-  padding: 8px 16px;
-  background-image: linear-gradient(to right, white, white 50%);
-  background-position: 0%;
-  background-size: 200%;
-  color: black;
-  font-size: 24px;
-  font-weight: 700;
-  transition: 0.4s;
-  cursor: pointer;
-
-}
-
-button:hover{
-  background-position: 100%;
-}
-
-canvas {
+canvas, .cameraElement video {
   width: 100%;
-  height: auto;
-  border-radius: 3rem;
+  height: 36vh;
+  border-radius: 8px;
 }
-/* Input field */
-.input-group {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column !important;
-  width: 25vw !important;
-  left: 25vw;
-  align-content: center;
-  text-align-last: center;
-}
-.input-group > label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+.cameraElement video {
+  object-fit: cover;
 }
 
 /* FoodInfo component */
-
-.foodContainer{
-  display: flex;
-  justify-content: center;
-}
-
-#foodTable{
-  position: absolute;
-  text-align: center;
-  top: 60vh;
-}
-
-#foodTable > table {
-  background-color: grey;
-  border-radius: 1vh;
-  color: white;
-  font-weight: 700;
-}
-#foodTable > table > tbody > tr > td {
-  color: white;
+.foodContainer table {
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 /* Loading spinner */
-
 .loader {
   border: 10px solid #f3f3f3;
   border-top: 10px solid grey;
@@ -197,11 +107,8 @@ input[type=number]::-webkit-outer-spin-button {
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
-  position: absolute;
-  left: 30%;
-  top: 30%;
-  z-index: 1000;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
