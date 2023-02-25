@@ -20,7 +20,7 @@
 .App {
   min-height: 100vh;
   position: relative;
-  background-color: #dddbda;
+  background-color: #e7efe7cf;
   overflow: hidden;
 }
 
@@ -33,24 +33,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #564D80;
-  min-height: 10vh;
-  border-radius: 3vh;
-  top: 1vh;
-  margin: 0 10px;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #564D80;
 }
 
 .navbar-brand {
@@ -69,23 +51,9 @@
 
 /* Camera component */
 
-.result {
-  position: absolute;
-  top: 20vh;
-  left: 100%;
-  width: 50vw;
-  display: flex;
-  align-items: center;
-  background-color: #dddbda
-}
-
-.result.hasPhoto {
-  left: 50vw;
-}
-
 canvas, .cameraElement video {
   width: 100%;
-  height: 36vh;
+  height: 41.25vh;
   border-radius: 8px;
 }
 
@@ -116,4 +84,8 @@ canvas, .cameraElement video {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
+
+.green-bg {
+  background-color: #b0b9b0 !important; 
+}

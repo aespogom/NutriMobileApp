@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App" id='App'>
       <Router>
-        <Navbar bg="light" variant="light" expand="lg">
+        <Navbar className='green-bg' variant="light" expand="lg">
           <Container>
             <Navbar.Brand href="/" className='d-flex align-items-center'>
               <FaHome className='me-2'/>

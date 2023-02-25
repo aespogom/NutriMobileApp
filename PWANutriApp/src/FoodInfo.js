@@ -170,7 +170,7 @@ export default function FoodInfo({backUpData, food}) {
                             </tbody>
                         </Table>
                         <Form.Group controlId="manually">
-                            <Form.Control placeholder='Incorrect? please enter the food manually here and press enter...' onKeyDown={(event) => event.keyCode == 13 ? setAndDisplayData(event.target.value) : null} />
+                            <Form.Control placeholder='Incorrect? please enter the food manually here and press enter...' onKeyDown={(event) => event.keyCode === 13 ? setAndDisplayData(event.target.value) : null} />
                         </Form.Group>
                     </div>
                 }
