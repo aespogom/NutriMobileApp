@@ -10,9 +10,10 @@ import { food101topK } from './utils';
 import data from './utils/food.json';
 import Button from 'react-bootstrap/Button';
 import * as cte from './utils/constants'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-
-export default  function Home(){
+export default function Home() {
   
   // Constants that will be used in the whole component
   let hasWebgl = false;
@@ -117,7 +118,7 @@ export default  function Home(){
     photo.height = height;
 
     let ctx = photo.getContext('2d');
-    ctx.clearRect(0, 0, ctx.width,ctx.height);
+    ctx.clearRect(0, 0, ctx.width, ctx.height);
     ctx.drawImage(video, 0, 0, width, height);
     setHasPhoto(true);
   }
@@ -182,10 +183,11 @@ export default  function Home(){
     // This function starts the food recognition process and clear the photo
 
     runModel();
-    let photo = photoRef.current;
-    let ctx = photo.getContext('2d');
-    ctx.clearRect(0,0,photo.width, photo.height);
-    setHasPhoto(false);
+
+    // let photo = photoRef.current;
+    // let ctx = photo.getContext('2d');
+    // ctx.clearRect(0,0,photo.width, photo.height);
+    // setHasPhoto(false);
   }
 
   const backUpDataFunction = () => {
@@ -200,22 +202,48 @@ export default  function Home(){
 
   return (
     <div>
-      {loading &&
-        <Spinner />
+      <Row className='justify-content-center mb-5'>
+        <Col md={8} lg={6}>
+          <h2 className='h5 mb-3'>First, please take a picture of your food</h2>
+          <div>
+            <div className='cameraElement' style={ !hasPhoto ? {display:'block'} : {display:'none'}}>
+              <video ref={videoRef}></video>
+            </div>
+            <div className='photoElement' style={ hasPhoto ? {display:'block'} : {display:'none'}}>
+              <canvas ref={photoRef}></canvas>
+            </div>
+            <div className='d-flex justify-content-center mt-2'>
+              <Button variant="outline-dark" className="d-flex align-items-center" onClick={takePhoto}>
+                {hasPhoto ? <TbRepeat className='me-2'/> : <FiCamera className='me-2'/>}
+                <span>{hasPhoto ? "New Picture" : "Take Picture"}</span>
+              </Button>
+              {hasPhoto &&
+                <Button variant="outline-dark" className="d-flex align-items-center ms-2" onClick={sendAndClosePhoto}>
+                  <MdOutlineSendToMobile className='me-2'/>
+                  Confirm to analyze
+                </Button>
+              }
+            </div>
+          </div>
+          
+          {loading &&
+            <div className='d-flex justify-content-center py-5'>
+              <Spinner />
+            </div>
+          }
+        </Col>
+      </Row>
+
+      {hasFood && foodpred &&
+        <Row className='justify-content-center'>
+          <Col md={8} lg={6}>
+            <h2 className='h5 mb-3'>Here's your food information</h2>
+            <div className='foodContainer'>
+              <FoodInfo backUpData={backUpData} food={foodpred} />
+            </div>
+          </Col>
+        </Row>
       }
-      <div className={'cameraElement ' + (hasPhoto ? '' : ' center')}>
-        <video ref={videoRef}></video>
-        <Button  variant="outline-dark" id="buttonSnap" onClick={takePhoto}>
-          {hasPhoto ? <TbRepeat/> : <FiCamera/>}
-        </Button>
-      </div>
-      <div id='photoElement' className={'cameraElement result' + (hasPhoto ? ' hasPhoto' : '')}>
-        <canvas ref={photoRef}></canvas>
-        <button onClick={sendAndClosePhoto} style={ hasPhoto ? {display:'block'} : {display:'none'}} ><MdOutlineSendToMobile/></button>
-      </div>
-      <div className='foodContainer'>
-        {hasFood && foodpred ? <FoodInfo backUpData={backUpData} food={foodpred} /> : null}
-      </div>
     </div>
   )
 }
