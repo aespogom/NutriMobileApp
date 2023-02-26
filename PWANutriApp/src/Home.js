@@ -57,7 +57,7 @@ export default function Home() {
   const getVideo = () => {
     navigator.mediaDevices
     .getUserMedia({
-      video: {width: 1920, height: 1080, facingMode: 'environment'}
+      video: {width: cte.width, height: cte.height, facingMode: 'environment'}
     })
     .then(stream => {
       let video = videoRef.current;
