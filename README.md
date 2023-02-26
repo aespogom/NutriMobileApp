@@ -5,6 +5,8 @@ Then, a AI model build in keras will retrieve the generic name of that dish.
 Finally, the USDA National Nutrient Database will retrieve its nutritional value.
 From the carbohydrates value, a estimate insuline dose will be calculated.
 
+![](https://github.com/aespogom/NutriMobileApp/blob/main/demo.gif)
+
 ### Get started
 To run the web app locally, follow these steps. 
 Please beware that node.js and npm are installed on your device before running. 
